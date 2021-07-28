@@ -53,7 +53,7 @@ function ProgramView () {
   const fetchDB = async (address) => {
     setLoading(true)
     const db = await getDB(address)
-
+    console.log("DB is loaded", db)
     if (db) {
       let entries
       if (db.type === 'eventlog' || db.type === 'feed')

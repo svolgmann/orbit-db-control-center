@@ -38,7 +38,9 @@ export const getDB = async (address) => {
   let db
   if (orbitdb) {
     db = await orbitdb.open(address)
+    console.log("DB is open", db)
     await db.load()
+    console.log("DB got", db)
   }
   return db
 }
